@@ -1,0 +1,23 @@
+
+DOCUMENTATION FOR THE USER CLASS
+The user class has 3 public variables, namely :
+        public $user_id;
+        public $user_name;
+
+The variables will get set using information from the $_SESSION variable.
+These variables will be used in the classes methods.
+
+METHODS :
+    
+        notif           -> Takes a boolan where true = notifs on and false = notifs off.
+                        Will update this value in the database and allow or disallow
+                        notifications to be sent to the users email.
+        update_pass ->  Takes as an input the old password and a new password
+                        if the old password matches it will change it to the
+                        new password in the database and then log the user out.
+        update_uname -> updates the users name in the database which will change
+                        the username displayed on the users profile.
+        update_email -> updates the users email in the db and sends a verification
+                        link to the new email address, will log the user out after that
+                        and wait for the user to log in again once they have verified the
+                        new email.

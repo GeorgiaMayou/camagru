@@ -1,0 +1,36 @@
+<html>
+
+        <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+        <div class = "columns">
+            
+            <!-- Sign in button starts here-->
+            <?php if (empty($_SESSION['user_name'])):?>
+            <div class="column">
+                <p ><a href = "../users/sign_in.php" class="button">Sign In</a></p>
+            </div>
+            <?php endif;?> 
+            <!-- Sign in button ends here-->
+            
+            <!-- Sign out button starts here-->
+            <?php if (!empty($_SESSION['user_name'])):?>
+            <div class="column">
+                <p class="control level-right"><a href = "../users/logout.php" class="button">Sign Out</a></p>
+            </div>
+            <?php endif;?> 
+            <!-- Sign in button ends here-->
+
+            <!--<a id= "about_us_button" class = "button is-pulled-right level">About Us</a>-->
+
+        </div>
+            <div id= "about_us_modal" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <div class = "box">
+                        <p>We're pretty cool.</p>
+                        </div>    
+                    </div>
+                    <button id = "modal_close" class="modal-close is-large" aria-label="close"></button>
+            </div>
+        
+        <script src="./header/modals.js"></script>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<script src = "../header/burger.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="Header">
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <br />
+      <div class = "nav-item" style = "height: 100px;"></div>
+      <a href = "../index.php"><img class = "" style= "height:80px; margin-top: 12px;" src="../images/camagru_logo.png"/></a>
+
+    <script>window.burgerMenu()</script>
+
+    <a id = "burger" role="button" class="navbar-burger burger" style= "height:80px; margin-top: 12px;" aria-label="menu" aria-expanded="false" data-target="nav_menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id = "nav_menu" class="navbar-menu">
+    <div class="navbar-end">
+        <div class="field is-grouped column level-item" style = "margin-top: 15px;">
+            <p class="control is-expanded">
+                <input class="input" type="text" placeholder="Search">
+              </p>
+              <p class="control">
+                <a class="button is-primary">
+                  Search
+                </a>
+              </p>
+        </div>
+
+
+          <div class="navbar-item has-dropdown is-hoverable level-item">
+              <a class="navbar-link">
+                More
+              </a>
+      
+              <div class="navbar-dropdown is-right">
+                <a href="../index.php" class="navbar-item">
+                  Home
+                </a>
+                <?php if (!empty($_SESSION['user_name'])):?>
+                <a href = "../users/my_account.php" class="navbar-item">
+                  Profile
+                </a>
+                <?php endif;?> 
+                <a href="../gallery.php" class="navbar-item">
+                  Gallery
+                </a>
+                <?php if (!empty($_SESSION['user_name'])):?>
+                <a href="../users/update_info_landing.php" class="navbar-item">
+                  My Info
+                </a>
+                <?php endif;?> 
+                <?php if (!empty($_SESSION['user_name'])):?>
+                <a href="../photos/take_image.php" class="navbar-item">
+                  New Image
+                </a>
+                <?php endif;?> 
+              </div>
+            </div>
+    </div>
+  </div>
+</nav>
+    </nav>
+    </div>
+    </div>
+    </html>
